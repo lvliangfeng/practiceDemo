@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--清单文件中application主题换为这个，去掉ActionBar-->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--无导航栏-->
+        <item name="windowActionBar">false</item>
+        <!--无标题栏-->
+        <item name="windowNoTitle">true</item>
+
+        <!--<item name="actionOverflowMenuStyle">@style/ToolbarPopupTheme</item>-->
+    </style>
+
+    <!--Toolbar弹出菜单栏的样式-->
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <!--API需要21才能设置菜单栏不覆盖Toolbar-->
+        <!--<item name="android:overlapAnchor" tools:ignore="NewApi">false</item>-->
+        <!-- 弹出层垂直方向上的偏移，负值会覆盖toolbar -->
+        <!--<item name="android:dropDownVerticalOffset">5dp</item>-->
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <!--<item name="android:dropDownHorizontalOffset">-2dp</item>-->
+
+    </style>
+
+</resources>

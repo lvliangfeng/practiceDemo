@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhongyujiaoyu.swiprefreshlayout.database.DatabaseActivity">
+
+    <Button
+        android:id="@+id/add_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加学生" />
+
+    <Button
+        android:id="@+id/delete_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除学生" />
+
+    <Button
+        android:id="@+id/delete_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除班级" />
+
+    <Button
+        android:id="@+id/update_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改学生信息" />
+
+    <Button
+        android:id="@+id/find_class_students"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查找某班学生" />
+
+    <Button
+        android:id="@+id/find_max_score_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="成绩最好学生" />
+
+    <Button
+        android:id="@+id/all_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示所有信息" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="classId" />
+
+        <EditText
+            android:id="@+id/class_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c_name" />
+
+        <EditText
+            android:id="@+id/class_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="studentId" />
+
+        <EditText
+            android:id="@+id/student_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="s_name" />
+
+        <EditText
+            android:id="@+id/score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="student_name" />
+
+        <EditText
+            android:id="@+id/student_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:maxLines="10"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
