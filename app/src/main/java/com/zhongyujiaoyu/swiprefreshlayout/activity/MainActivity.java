@@ -1,4 +1,4 @@
-package com.zhongyujiaoyu.swiprefreshlayout;
+package com.zhongyujiaoyu.swiprefreshlayout.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,6 +7,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
+import com.zhongyujiaoyu.swiprefreshlayout.R;
 import com.zhongyujiaoyu.swiprefreshlayout.adapter.ListViewAdapter;
 
 import java.lang.ref.WeakReference;

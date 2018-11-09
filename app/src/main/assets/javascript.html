@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>This is title!</title>
+    <script>
+            function androidCallJs(){
+                alert("Andorid调用JS的callJs方法");
+            }
+
+            function jsCallAndroid(){
+                jsi.showToast("js调用Android方法");
+            }
+
+    </script>
+</head>
+
+<body>
+<!--<input type="button" onclick="jsi.showToast('js调用Android')" value="js调用java代码">-->
+<input type="button" onclick="jsCallAndroid()" value="js调用java代码-1">
+</body>
+</html>

@@ -3,6 +3,7 @@ package com.zhongyujiaoyu.swiprefreshlayout.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,16 +36,26 @@ public class ViewPagerPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        Log.d(TAG, "instantiateItem: 添加父容器View" + position);
-        container.addView(mData.get(position));
-        return mData.get(position);
+        Log.e("llf", "instantiateItem: " + position);
+//        if (position > mData.size() - 1) {
+//            position = position % mData.size();
+//        }
+        View view = mData.get(position);
+        ViewGroup parent = (ViewGroup) view.getParent();
+        if (parent != null) {
+            parent.removeView(view);
+        }
+//        container.addView(mData.get(position));
+//        return mData.get(position);
+        container.addView(view);
+        return view;
     }
 
-    
+
     //4. 确认"第三步"instantiateItem返回的Object与页面View是否是同一个
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        Log.d(TAG, "isViewFromObject: 判断");
+//        Log.e("llf", "isViewFromObject: 判断");
         return view == object;
     }
 
@@ -52,7 +63,23 @@ public class ViewPagerPagerAdapter extends PagerAdapter {
     //2. 滑动切换时销毁当前View
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        Log.d(TAG, "destroyItem: 销毁View" + position);
-        container.removeView(mData.get(position));
+        Log.e("llf", "destroyItem: 销毁View" + position);
+//        container.removeView(mData.get(position));
+//        container.removeView((View) object);
+
+//        if (position > mData.size() - 1) {
+//            position = position % mData.size();
+//        }
+        View view = mData.get(position);
+        ViewGroup vp = (ViewGroup) view.getParent();
+        if (vp == null) {
+            container.removeView(mData.get(position));
+        }
+
+    }
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return POSITION_NONE;
     }
 }
